@@ -1,6 +1,6 @@
 # 🔥 Applied Deep Learning & Generative AI
 
-A 100-day deep learning study repository, built in the same working style as its sibling repo
+A deep learning study repository, built in the same working style as its sibling repo
 [Applied Data Engineering & Machine Learning](https://github.com/efekaravul/Applied-Data-Engineering-And-Machine-Learning):
 one numbered learning path, one folder per topic, one commit per study day.
 
@@ -36,18 +36,18 @@ Planned milestones, in the order the curriculum reaches them:
 
 A numbered learning path, from Python fundamentals to generative models:
 
-*   **`00 - Bonus - Python ile Programlamaya Giris/`** — the bonus introductory Python track (61 lessons), kept separate from the main 100-day path.
-*   **`01 - Python Temelleri ve Ileri Seviye/`** *(Days 1–9)*: Core language foundations plus the advanced constructs the rest of the course assumes — comprehensions, functional built-ins, OOP and error handling — closing with the advanced-Python quiz assignment.
-*   **`02 - PyTorch Temelleri/`** *(Days 10–12)*: Tensor creation, `dtype`/`shape`/`device`, and the NumPy ↔ tensor bridge; indexing, slicing, `reshape`/`view`/`squeeze`/`permute` and the copy-vs-view distinction; element-wise arithmetic, matrix multiplication and the shape rules behind it, aggregation and broadcasting.
-*   **`03 - Makine Ogrenmesi/`** *(Days 13–14)*: An accelerated pass over the machine-learning vocabulary deep learning builds on, followed by the underlying mathematics — derivatives, the chain rule, and gradients as the actual mechanism behind backpropagation.
-*   **`04 - Derin Ogrenmeye Giris/`** *(Days 15–19)*: The neuron, the layer and forward propagation; activation functions (ReLU, Sigmoid, Tanh, Softmax) and where each one fails (vanishing gradients, dead ReLUs); loss and cost functions matched to the output layer — MSE/MAE for regression, BCE and Cross-Entropy for classification, and why logits vs. probabilities decides which loss is correct; optimizers from SGD and Momentum through RMSProp to Adam, with the learning rate treated as the single most consequential hyperparameter.
-*   **`05 - Model Egitimi ve Tahminleme/`** *(Days 20–32)*: The training loop written by hand — `zero_grad()` → forward → loss → `backward()` → `step()` — with `eval()`/`inference_mode()` discipline on the test side. Then non-linearity, shown on non-linearly-separable data where a stack of linear layers is still just one linear layer; multi-class output via `CrossEntropyLoss` and logits → `softmax` → `argmax`; `state_dict`-based saving and loading; and the pretrained-model assignment.
-*   **`06 - Goruntu Isleme ve CNN/`** *(Days 33–49)*: Images as tensors — channels, normalization and `torchvision.transforms`; `Dataset`/`DataLoader` batching on CIFAR-10; `kernel_size`, `stride`, `padding` and pooling with the output-shape arithmetic that ties them together; a VGG-style architecture built block by block; the larger applied Desert101 study; TensorBoard experiment tracking; and working with pretrained `torchvision` models.
+*   **`00 - Bonus - Introduction to Programming with Python/`** — the bonus introductory Python track (61 lessons), kept separate from the main 100-day path.
+*   **`01 - Python Fundamentals and Advanced Python/`** *(Days 1–9)*: Core language foundations plus the advanced constructs the rest of the course assumes — comprehensions, functional built-ins, OOP and error handling — closing with the advanced-Python quiz assignment.
+*   **`02 - PyTorch Fundamentals/`** *(Days 10–12)*: Tensor creation, `dtype`/`shape`/`device`, and the NumPy ↔ tensor bridge; indexing, slicing, `reshape`/`view`/`squeeze`/`permute` and the copy-vs-view distinction; element-wise arithmetic, matrix multiplication and the shape rules behind it, aggregation and broadcasting.
+*   **`03 - Machine Learning/`** *(Days 13–14)*: An accelerated pass over the machine-learning vocabulary deep learning builds on, followed by the underlying mathematics — derivatives, the chain rule, and gradients as the actual mechanism behind backpropagation.
+*   **`04 - Introduction to Deep Learning/`** *(Days 15–19)*: The neuron, the layer and forward propagation; activation functions (ReLU, Sigmoid, Tanh, Softmax) and where each one fails (vanishing gradients, dead ReLUs); loss and cost functions matched to the output layer — MSE/MAE for regression, BCE and Cross-Entropy for classification, and why logits vs. probabilities decides which loss is correct; optimizers from SGD and Momentum through RMSProp to Adam, with the learning rate treated as the single most consequential hyperparameter.
+*   **`05 - Model Training and Prediction/`** *(Days 20–32)*: The training loop written by hand — `zero_grad()` → forward → loss → `backward()` → `step()` — with `eval()`/`inference_mode()` discipline on the test side. Then non-linearity, shown on non-linearly-separable data where a stack of linear layers is still just one linear layer; multi-class output via `CrossEntropyLoss` and logits → `softmax` → `argmax`; `state_dict`-based saving and loading; and the pretrained-model assignment.
+*   **`06 - Image Processing and CNN/`** *(Days 33–49)*: Images as tensors — channels, normalization and `torchvision.transforms`; `Dataset`/`DataLoader` batching on CIFAR-10; `kernel_size`, `stride`, `padding` and pooling with the output-shape arithmetic that ties them together; a VGG-style architecture built block by block; the larger applied Desert101 study; TensorBoard experiment tracking; and working with pretrained `torchvision` models.
 *   **`07 - Transfer Learning/`** *(Days 50–57)*: Freezing a pretrained backbone, replacing the classifier head, and matching the model's own preprocessing transforms — applied to a dog-breed classifier and then to the transfer-learning assignment.
-*   **`08 - NLP ve Transformer Teori/`** *(Days 58–59)*: Tokenization, embeddings and the sequence-modelling problem; then attention, multi-head self-attention, positional encoding, and the encoder/decoder split.
+*   **`08 - NLP and Transformer Theory/`** *(Days 58–59)*: Tokenization, embeddings and the sequence-modelling problem; then attention, multi-head self-attention, positional encoding, and the encoder/decoder split.
 *   **`09 - Vision Transformer/`** *(Days 60–80)*: Reading the ViT paper as an architecture spec and the transform choices it dictates; patching — turning an image into a sequence, the step that lets a language architecture read pixels; the learnable class token and position embeddings; the MLP block with layer normalization and residual connections; the assembled model; and the course's capstone assignment.
-*   **`10 - GPT ve LLM/`** *(Days 81–86)*: The decoder-only architecture and preparing text into training batches; next-token prediction as the training objective; token and position embeddings with masked self-attention; logits → text via temperature and `torch.multinomial` sampling; and training the model end to end.
-*   **`11 - Kapanis Projesi/`** *(Days 87–100)*: The closing project and wrap-up.
+*   **`10 - GPT and LLM/`** *(Days 81–86)*: The decoder-only architecture and preparing text into training batches; next-token prediction as the training objective; token and position embeddings with masked self-attention; logits → text via temperature and `torch.multinomial` sampling; and training the model end to end.
+*   **`11 - Closing Project/`** *(Days 87–100)*: The closing project and wrap-up.
 
 Shared infrastructure:
 
@@ -56,36 +56,6 @@ Shared infrastructure:
 
 > Datasets (`data/`), model weights (`models/`) and TensorBoard logs (`runs/`) are kept locally and
 > intentionally excluded from version control (see `.gitignore`) to keep the repository lightweight.
-
----
-
-## ⚙️ Setup
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python check_env.py
-```
-
-For a CUDA-capable GPU, install PyTorch from its own index instead of PyPI:
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-```
-
-Notebooks live inside the numbered topic folders, so the project root has to be on `sys.path`
-before `utils` can be imported:
-
-```python
-import sys, pathlib
-sys.path.append(str(pathlib.Path.cwd().parent))  # project root
-
-from utils import get_device, set_seed, train, plot_loss_curves
-
-set_seed(42)
-device = get_device()
-```
 
 ---
 
