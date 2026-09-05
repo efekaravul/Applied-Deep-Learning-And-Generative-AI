@@ -1,0 +1,40 @@
+# --- Core / PyTorch ---
+# GPU (CUDA 12.1) icin:  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+torchaudio
+torchinfo
+torchmetrics
+
+# --- Bilimsel hesaplama & veri ---
+numpy
+pandas
+scipy
+scikit-learn
+
+# --- Gorsellestirme ---
+matplotlib
+seaborn
+plotly
+
+# --- Goruntu isleme ---
+opencv-python
+pillow
+
+# --- NLP / Transformer ---
+transformers
+tokenizers
+datasets
+
+# --- Deney takibi ---
+tensorboard
+tqdm
+
+# --- Notebook ortami ---
+jupyter
+ipykernel
+ipywidgets
+
+# --- Veri indirme ---
+kaggle
+requests

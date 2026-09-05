@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets (lokal tutulur, versiyonlanmaz)
+data/
+!data/.gitkeep
+
+# Model agirliklari (buyuk dosyalar)
+models/
+!models/.gitkeep
+*.pt
+*.pth
+
+# TensorBoard loglari
+runs/
+!runs/.gitkeep
+
+# Local AI assistant config
+CLAUDE.md
