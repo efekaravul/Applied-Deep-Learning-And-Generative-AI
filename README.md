@@ -39,14 +39,31 @@ A numbered learning path, from Python fundamentals to generative models:
 
 *   **`01 - Python Fundamentals and Advanced Python/`** : Core language foundations plus the advanced constructs the rest of the course assumes — comprehensions, functional built-ins, OOP and error handling — closing with the advanced-Python quiz assignment.
 *   **`02 - PyTorch Fundamentals/`** : Tensor creation, `dtype`/`shape`/`device`, and the NumPy ↔ tensor bridge; indexing, slicing, `reshape`/`view`/`squeeze`/`permute` and the copy-vs-view distinction; element-wise arithmetic, matrix multiplication and the shape rules behind it, aggregation and broadcasting.
-*   **`03 - Machine Learning/`** : An accelerated pass over the machine-learning vocabulary deep learning builds on, followed by the underlying mathematics — derivatives, the chain rule, and gradients as the actual mechanism behind backpropagation.
-*   **`04 - Introduction to Deep Learning/`** : The neuron, the layer and forward propagation; activation functions (ReLU, Sigmoid, Tanh, Softmax) and where each one fails (vanishing gradients, dead ReLUs); loss and cost functions matched to the output layer — MSE/MAE for regression, BCE and Cross-Entropy for classification, and why logits vs. probabilities decides which loss is correct; optimizers from SGD and Momentum through RMSProp to Adam, with the learning rate treated as the single most consequential hyperparameter.
-*   **`05 - Model Training and Prediction/`** : The training loop written by hand — `zero_grad()` → forward → loss → `backward()` → `step()` — with `eval()`/`inference_mode()` discipline on the test side. Then non-linearity, shown on non-linearly-separable data where a stack of linear layers is still just one linear layer; multi-class output via `CrossEntropyLoss` and logits → `softmax` → `argmax`; `state_dict`-based saving and loading; and the pretrained-model assignment.
-*   **`06 - Image Processing and CNN/`** : Images as tensors — channels, normalization and `torchvision.transforms`; `Dataset`/`DataLoader` batching on CIFAR-10; `kernel_size`, `stride`, `padding` and pooling with the output-shape arithmetic that ties them together; a VGG-style architecture built block by block; the larger applied Desert101 study; TensorBoard experiment tracking; and working with pretrained `torchvision` models.
-*   **`07 - Transfer Learning/`** : Freezing a pretrained backbone, replacing the classifier head, and matching the model's own preprocessing transforms — applied to a dog-breed classifier and then to the transfer-learning assignment.
-*   **`08 - NLP and Transformer Theory/`** : Tokenization, embeddings and the sequence-modelling problem; then attention, multi-head self-attention, positional encoding, and the encoder/decoder split.
-*   **`09 - Vision Transformer/`** : Reading the ViT paper as an architecture spec and the transform choices it dictates; patching — turning an image into a sequence, the step that lets a language architecture read pixels; the learnable class token and position embeddings; the MLP block with layer normalization and residual connections; the assembled model; and the course's capstone assignment.
-*   **`10 - GPT and LLM/`** : The decoder-only architecture and preparing text into training batches; next-token prediction as the training objective; token and position embeddings with masked self-attention; logits → text via temperature and `torch.multinomial` sampling; and training the model end to end.
+*   **`03 - Model Training and Prediction/`** : Two bilingual linear-regression notebooks: manually defined weight and bias, then an `nn.Linear` implementation. Covers input/target preparation, an 80/20 split, MSE, SGD, forward → loss → `zero_grad()` → `backward()` → `step()`, evaluation with `eval()`/`inference_mode()`, loss curves, parameter inspection, and prediction plots. Planned extensions include non-linearity, multi-class classification, and checkpoint saving/loading.
+*   **`04 - Image Processing and CNN/`** *(planned)* : Images as tensors, normalization and `torchvision.transforms`; `Dataset`/`DataLoader` batching on CIFAR-10; convolution, pooling and output-shape arithmetic; a VGG-style architecture; Desert101 experiments; TensorBoard tracking; and pretrained `torchvision` models.
+*   **`05 - Transfer Learning/`** *(planned)* : Freezing a pretrained backbone, replacing the classifier head, and matching the model's preprocessing transforms, applied to a dog-breed classifier and the transfer-learning assignment.
+*   **`06 - NLP and Transformer Theory/`** *(planned)* : Tokenization, embeddings and sequence modelling; attention, multi-head self-attention, positional encoding, and the encoder/decoder split.
+*   **`07 - Vision Transformer/`** *(planned)* : Patch embedding, a learnable class token and position embeddings, attention and MLP blocks with layer normalization and residual connections, and the assembled ViT model.
+*   **`08 - GPT and LLM/`** *(planned)* : Preparing text batches, decoder-only architecture, next-token prediction, token and position embeddings, masked self-attention, temperature-controlled sampling with `torch.multinomial`, and end-to-end training.
+
+Supporting directories and files:
+
+* **`utils/`** : Shared device, training, and plotting helpers.
+* **`data/`** : Local datasets, excluded from Git.
+* **`models/`** : Local model weights, excluded from Git.
+* **`runs/`** : Local TensorBoard logs, excluded from Git.
+* **`requirements.txt`** and **`check_env.py`** : Dependency list and environment checks.
+
+### Linear Regression Notebooks / Doğrusal Regresyon Notebook'ları
+
+| Notebook | English | Türkçe |
+| --- | --- | --- |
+| [pytorch_training_steps.ipynb](03%20-%20Model%20Training%20and%20Prediction/pytorch_training_steps.ipynb) | Manually registered weight and bias; 250 training epochs; training/test loss curves and learned parameters. | Elle kaydedilen ağırlık ve bias; 250 epoch eğitim; eğitim/test kayıp eğrileri ve öğrenilen parametreler. |
+| [pytorch_training_structural.ipynb](03%20-%20Model%20Training%20and%20Prediction/pytorch_training_structural.ipynb) | `nn.Linear(1, 1)` with `(N, 1)` float32 tensors; 120 training epochs; test predictions compared visually with true grades. | `(N, 1)` şeklinde float32 tensörlerle `nn.Linear(1, 1)`; 120 epoch eğitim; test tahminlerinin gerçek notlarla görsel karşılaştırması. |
+
+**English:** Each non-empty code cell is preceded by English and Turkish Markdown explanations. Both notebooks read `data/06-study_hours_grades.csv`, which must be supplied locally; it is not included in the repository. Run the cells in order with the notebook folder as the working directory so `../data/` resolves correctly.
+
+**Türkçe:** Her dolu kod hücresinin önünde İngilizce ve Türkçe Markdown açıklamaları bulunur. İki notebook da yerel olarak sağlanması gereken `data/06-study_hours_grades.csv` dosyasını okur; veri dosyası repoya dahil değildir. `../data/` yolunun doğru çözülmesi için notebook klasörünü çalışma dizini olarak kullanıp hücreleri sırayla çalıştır.
 
 
 ---
